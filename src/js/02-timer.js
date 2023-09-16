@@ -1,3 +1,18 @@
+import flatpickr from "flatpickr";
+import 'flatpickr/dist/flatpickr.min.css';
+import { Notify } from "notiflix";
+
+const inputEl = document.querySelector('#datetime-picker');
+const btnEl = document.querySelector('button[data-start]');
+const timerDiv = document.querySelector('.timer');
+const daysEl = document.querySelector('span[data-days]');
+const hoursEl = document.querySelector('span[data-hours]');
+const minEl = document.querySelector('span[data-minutes]');
+const secEl = document.querySelector('span[data-seconds]');
+
+btnEl.classList.add('disabled');
+let userDate = null;
+
 const options = {
   enableTime: true,
   time_24hr: true,
